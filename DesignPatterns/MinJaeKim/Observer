@@ -1,0 +1,27 @@
+개발할 때, 
+리엑터가 옵저버 패턴으로 구성되어 있다고 함
+
+특정 이벤트가 가면 동작
+
+
+옵저버 패턴은 객체의 상태 변화를 관찰하는 관찰자들, 
+즉 옵저버들의 목록을 객체에 등록하여 상태 변화가 있을 때마다 메서드 등을 통해 객체가 직접 목록의 각 옵저버에게 통지하도록 하는 디자인 패턴이다. 
+주로 분산 이벤트 핸들링 시스템을 구현하는 데 사용된다. 발행/구독 모델로 알려져 있기도 하다.
+
+
+어떤 객체의 상태가 변할 때 그와 연관된 객체 들에게 알림을 보내는 디자인 패턴이다.
+
+public interface Observer {
+     /** * This method is called whenever the observed object is changed. An * application calls an <tt>Observable</tt> object's * <code>notifyObservers</code> method to have all the object's * observers notified of the change. * * @param o the observable object. * @param arg an argument passed to the <code>notifyObservers</code> * method. */ 
+     void update(Observable o, Object arg);
+}
+
+
+푸시, 풀?
+메세지 큐중에 레디 카프카
+
+카프카가 풀루 땡겨와서 쓰는 방식
+
+분산처리에서 효율성에 좋은 건 카프카
+
+본인 주체에서 해야할 게 많은데 

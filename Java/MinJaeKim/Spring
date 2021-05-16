@@ -1,0 +1,103 @@
+StringTokenizer st = new StringTokenizer(br.readLine());
+
+HashMap<String, String> poke = new HashMap<String, String>(N*2);
+
+String name= br.readLine();
+poke.put(name,Integer.toString(i+1));
+poke.put(Integer.toString(i+1),name);
+System.out.println(poke.get(br.readLine()));
+
+
+HashMap, HashSet 차이java
+
+'''
+C언어는 OS별로 지원하는 구조가 다름 
+컴파일 할때 윈도우랑 리눅스랑 OS구조적인 특징으로 다른 게있음
+CPU적인 OS 적인 운체 특징 컴파일 내부
+보안공부: cPU만따져도 intel amd실제로 컴파일된 프로그램 열어보면 메모리 구조가 완전 다름
+cPU가 읽어들일수 있는 메모리적 특징이 달라서
+자바는 OS 맞는 JVM 읽어와서 
+
+JVM os별로 
+c은 운영체제에 맞게 cpu의 메모리 구조는 크거든요
+컴파일 이눅스는 리눅스 , 
+
+자바는 바이트코드는 같아도 jvm에서 os관련돼서 해석하는게 다름
+jvm 깊게 들어가면
+커널 네이티브한 하드웨어쪽 기능 사용이 힘듦? 굳이 근데 사용할 필요가 없는 작업엔 좋겠음
+
+JVM 
+
+JDK 개발도구? JIE만 설치하면 자바 컴파일러가 없을 거
+JRE 는 런타임 환경적인 구성만 있는거고
+개발자와 사용자에서 필요한 것 차이
+자바 프로그래밍 해야하는데 사용자입장에선 자바만 실행..?
+
+
+JVM: 중요한건 메모리 구조와 GC이다.
+스택 힙영역 
+객체가 JVM 들어가서 함.
+
+가비지 콜랙터 어떻게 일어는지?
+
+스터디 방향 알려주는 메놑분께서 GC 중요하다 해서
+
+JVM 힙구조 보면
+
+마이너지씨 풀지씨
+
+객체 만들어졌을때 첨에 에던영역으로 들어와서
+에덴이 차면 서바이벌영역으로 보내고..
+이 과정까지가 마이너지씨
+서바이벌 영역이 가득차면 영영끼리 왔다갔다 하면서 살아있는 객체만보면서.
+
+영-> 올드에서 보내줌 오래살아있는 객체는
+마이너지씨 age bit라고 객체 살아남은 횟수별로
+gc 튜닝할떄 설정기준치가 있을떄 
+오래 살아남은 과정가서 
+
+7버전부터 g1나와서 이거까진 알아놓는게좋음
+
+멀티쓰레드 힙영역에서 스트링 만들었는데 이 스트링이 
+스트링 a= abc 만들었는데
+a+d 하면 기존객체는 그대로 두고 새로운걸 만드는거라 이런걸 gc에서 지워주는 것이다!
+c에는 함수써서 풀어주는거고..
+
+제네릭
+상속
+스택 힙 어래이 리스트 링크드 리스트
+맵을써도 되고 어레이 리스트써도되고 
+
+ 해시맵은 딕셔너리
+
+ 해시셋은 셋
+해시테이블 쓰레드에 안정적이고
+
+해시테이블 키에 널 들어갈 수 없음
+
+
+'''
+
+인터페이스 먼저 설계하지 않는 사람들이 있음
+
+먼저 클래스
+내부기능은 다르겠지만
+
+람다: 대표적 함수형 프로그래밍. 코드 간략하게 쓰려고 쓰는게 가장 큼
+쓰레드에도 뜨임
+
+'''
+
+Comparable과 Comparator
+JVM Warm Up, Cold Start
+JIT 컴파일러 사용 이유(속도차이)
+JIT 컴파일러, HotSpot, GraalVM
+GC 과정(Young 영역에서 Old 영역으로 가는 기준), GC 튜닝
+JDK 8 이상 G1 GC
+Generic 공변성, 반공변성
+ArrayList와 LinkedList의 사이즈 증가 과정
+멀티 쓰레드의 Lock 동작 과정
+Blocking, Non-Blocking, Sync, Async
+
+F-lab
+코드리뷰
